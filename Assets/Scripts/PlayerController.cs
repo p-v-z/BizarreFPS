@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         
+        // Handle player input (if any)
         HandleMovement();
         HandleWeapon();
     }
@@ -100,6 +101,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+        // Fire weapon and invoke event
         weapon.Fire();
         OnFire(weapon);
     }

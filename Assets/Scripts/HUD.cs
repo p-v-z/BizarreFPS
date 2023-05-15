@@ -31,7 +31,7 @@ public class HUD : MonoBehaviour
         FillBullets(playerWeapon.currentAmmo);
         maxAmmo = playerWeapon.maxAmmo;
         
-        // Subscribe to player fire event
+        // Subscribe to player fire event and weapon reload event
         PlayerController.OnFire += HandlePlayerFire;
         Weapon.OnReload += HandlePlayerReload;
     }
@@ -65,7 +65,7 @@ public class HUD : MonoBehaviour
 
     private void HandlePlayerFire(Weapon obj)
     {
-        // pop the last bullet
+        // Remove first bullet
         var bullet = bullets[0];
         bullets.Remove(bullet);
         Destroy(bullet);

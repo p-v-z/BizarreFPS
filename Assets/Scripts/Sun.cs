@@ -8,7 +8,6 @@ public class Sun : MonoBehaviour
     [SerializeField] private float sunRise = 6;
     [SerializeField] private float sunSet = 18;
     
-    // Start is called before the first frame update
     private void Start()
     {
         // Get system current time
